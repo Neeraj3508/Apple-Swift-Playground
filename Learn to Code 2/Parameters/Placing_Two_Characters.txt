@@ -1,0 +1,17 @@
+let expert = Expert()
+let character = Character()
+world.place(expert, facing: .north, atColumn: 3, row: 0)
+expert.turnLockUp()
+world.place(expert, atColumn: 4, row: 0)
+for i in 0 ... 4 {
+    for j in 0 ... 6 {
+        if(i%2==0 && j%2==0)
+        {
+            world.place(character, atColumn: i, row: j)
+            character.collectGem()
+        }
+    }
+    
+}
+world.place(character, atColumn: 3, row: 0)
+character.toggleSwitch()

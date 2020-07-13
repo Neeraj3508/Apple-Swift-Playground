@@ -1,0 +1,57 @@
+let expert = Expert()
+let character = Character()
+
+func turnLock(up : Bool, numberOfTimes : Int)
+{
+	if up {
+        for i in 1 ... numberOfTimes {
+            expert.turnLockUp()
+        }
+    }
+    else
+    {
+        for i in 1 ... numberOfTimes {
+            expert.turnLockDown()
+        }
+        
+    }
+}
+
+
+func turnAround() {
+    expert.turnLeft()
+    expert.turnLeft()
+}
+
+func turnAroundCharacter() {
+    character.turnLeft()
+    character.turnLeft()
+}
+
+
+turnLock(up: true, numberOfTimes: 3)
+turnAround()
+turnLock(up: true, numberOfTimes: 3)
+character.moveForward()
+character.moveForward()
+character.moveForward()
+character.collectGem()
+turnAroundCharacter()
+character.moveForward()
+turnLock(up: false, numberOfTimes: 2)
+turnAround()
+turnLock(up: false, numberOfTimes: 2)
+character.turnLeft()
+character.moveForward()
+character.turnLeft()
+character.moveForward()
+character.collectGem()
+turnAroundCharacter()
+character.moveForward()
+character.moveForward()
+turnAround()
+turnLock(up: false, numberOfTimes: 1)
+character.moveForward()
+character.collectGem()
+
+

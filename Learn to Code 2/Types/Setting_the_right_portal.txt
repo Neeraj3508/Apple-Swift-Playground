@@ -1,0 +1,22 @@
+func turnAround() {
+    turnLeft()
+    turnLeft()
+}
+for i in 1 ... 10{
+    moveForward()
+    if isBlocked
+    {
+        turnAround()
+        bluePortal.isActive = !bluePortal.isActive
+    }
+    if isOnGem
+    {
+        collectGem()
+    }
+}
+turnAround()
+moveForward()
+if isOnGem{
+    collectGem()
+}
+

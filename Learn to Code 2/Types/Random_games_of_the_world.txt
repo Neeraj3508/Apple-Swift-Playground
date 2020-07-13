@@ -1,0 +1,25 @@
+let totalGems = randomNumberOfGems
+var gems = 0
+func turnAround()
+{
+    turnLeft()
+    turnLeft()
+}
+while gems != totalGems
+{
+    moveForward()
+    if isBlocked{
+        turnAround()
+        pinkPortal.isActive = !pinkPortal.isActive
+    }
+    else
+    {
+        bluePortal.isActive = !bluePortal.isActive
+    }
+    if isOnGem
+    {
+        collectGem()
+        gems+=1
+    }
+    
+}

@@ -1,0 +1,13 @@
+var gemCounter = 0
+for i in 1...16{
+    moveForward()
+    if isBlocked && isBlockedLeft {
+        turnRight()
+    }
+    if isOnGem {
+        collectGem()
+        gemCounter+=1
+    }
+    
+    
+}

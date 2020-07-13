@@ -1,0 +1,69 @@
+func turnAround()
+{
+    turnLeft()
+    turnLeft()
+}
+
+func collectToggle()
+{
+    if isOnGem{
+        collectGem()
+    }
+    else
+    {
+        toggleSwitch()
+    }
+}
+
+func moveActTurn()
+{
+    moveForward()
+    collectToggle()
+    turnAround()
+}
+func solveHalf()
+{
+    moveActTurn()
+    moveForward()
+    turnLeft()
+    moveForward()
+    collectToggle()
+    turnAround()
+}
+
+func solveOtherHalf()
+{
+    moveActTurn()
+    moveForward()
+    turnRight()
+    moveActTurn()
+    moveForward()
+    moveActTurn()
+    moveForward()
+    turnLeft()
+    moveForward()
+    collectToggle()
+    
+}
+
+orangePortal.isActive = false
+turnRight()
+moveForward()
+moveForward()
+solveHalf()
+orangePortal.isActive = true
+moveForward() 
+orangePortal.isActive = false
+solveOtherHalf()
+moveForward()
+greenPortal.isActive = false
+moveForward()
+solveHalf()
+greenPortal.isActive = true
+moveForward()
+greenPortal.isActive = false
+solveOtherHalf()
+
+
+
+
